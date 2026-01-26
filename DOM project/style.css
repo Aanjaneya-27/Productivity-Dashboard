@@ -1,0 +1,454 @@
+:root{
+    --primary-color: #577575;
+    --secondary-color: #252A34;
+    --tri-color: #FF2E63;
+    --four-color:#EAEAEA;
+    --bg-color: #0f172a;
+   --card-bg: rgba(255,255,255,0.08);
+   --text-color: #e5e7eb;
+   --accent: #38bdf8;
+   --bg-color: #f8fafc;
+   --card-bg: rgba(0,0,0,0.06);
+   --text-color: #020617;
+   --accent: #0ea5e9;
+
+       /* Task colours */
+          --task-1: #0A2647;
+          --task-2: #A9907E;
+            --task-3: #5F6F52;
+            --task-4:#9E7676;
+            --task-5:#2C3639;
+            --task-6: #FFD41D;
+
+}
+@font-face {
+    font-family: Giamori;
+    src: url(./Fonts/Style/Giamori.otf);
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    background-color: var(--primary-color);
+}
+
+body{
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+:root{
+  --bg-color: #0f172a;
+  --card-bg: rgba(255,255,255,0.08);
+  --text-color: #e5e7eb;
+  --accent: #38bdf8;
+}
+
+.light-theme{
+  --bg-color: #f8fafc;
+  --card-bg: rgba(0,0,0,0.06);
+  --text-color: #020617;
+  --accent: #0ea5e9;
+}
+
+body{
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar{
+  width: 100%;
+  padding: 14px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.navbar h2{
+  font-size: 20px;
+  font-weight: 600;
+}
+.theme-toggle{
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--card-bg);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.theme-toggle:hover{
+  transform: rotate(15deg) scale(1.1);
+}
+
+.theme-toggle i{
+  font-size: 22px;
+  color: var(--accent);
+}
+
+
+
+
+section.allelems{
+height: 100%;
+width: 100%;
+padding: 40px;
+padding-top: 80px;
+display: flex;
+flex-wrap: wrap;
+align-items: flex-start;
+gap: 35px;
+position: absolute;
+}
+
+.elem{
+    background-color: var(--tri-color);
+    border-radius: 20px;
+    font-size: 25px;
+    height: 350px;
+    width: 250px;
+    overflow: hidden;
+    position: relative;
+    font-family: Giamori, sans-serif;
+    transition: all ease 0.3s;
+
+}
+
+.elem img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.elem h3{
+    position: absolute;
+    bottom: 2%;
+    right: 5%;
+    font-size: 25px;
+    color: var(--four-color);
+}
+
+.elem:active{
+    scale: 0.9;
+    cursor: pointer;
+}
+
+.fullelem{
+    height: 100%;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 35px;
+    display: none;
+    position: absolute;
+}
+
+.btn{
+    position: absolute;
+    right: 5%;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.btn:active{
+    scale: 0.9;
+    cursor: pointer;
+}
+
+.Todo-page{
+   
+}
+
+.Todo-page .todo-container{
+    
+    height: 80%;
+    width: 100%;
+    margin-top: 55px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Todo-page .todo-container .addTask{
+    width: 30%;
+    height: 100%;
+    background-color: var(--task-2);
+    border-radius: 13px;
+}
+
+.Todo-page .todo-container .allTask{
+    width: 65%;
+    height: 100%;
+    background-color: var(--task-3);
+    border-radius: 20px;
+}
+
+.Todo-page .todo-container .addTask form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+}
+.Todo-page .todo-container .addTask form input{
+    padding: 12px 22px;
+    width: 100%;
+    font-size: 30px;
+    background-color: var(--task-4);
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.Todo-page .todo-container .addTask form textarea{
+    padding: 12px 22px;
+    width: 100%;
+    font-size: 30px;
+    background-color: var(--task-5);
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.Todo-page .todo-container .addTask form button{
+    padding: 12px 22px;
+    width: 100%;
+    font-size: 30px;
+    background-color: #5DD3B6;
+    border-radius: 4px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+    transition: all ease 0.2s;
+}
+
+.Todo-page .todo-container .addTask form button:active{
+    cursor: pointer;
+    scale: 0.95;
+}
+
+.Todo-page .todo-container .allTask{
+     
+    width: 65%;
+    height: 100%;
+    background-color: var(--task-3);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    overflow: auto;
+}
+
+.firstTask{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: wheat;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    padding: 20px 35px;
+}
+
+.firstTask button{
+    padding: 10px 25px;
+    background-color: var(--task-6);
+    font-weight: 600;
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+}
+.Daily-Planner{
+  text-align: center;
+}
+
+.Daily-Planner input{
+  padding: 12px;
+  width: 280px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: #020617;
+  color: #fff;
+}
+
+.Daily-Planner button{
+  padding: 12px 18px;
+  margin-left: 8px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.Daily-Planner ul{
+  list-style: none;
+  margin-top: 25px;
+  padding: 0;
+}
+
+.Daily-Planner li{
+  background: #111827;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Daily-Planner .delete-plan{
+  background: #ef4444;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.Pomodoro-Timer{
+  text-align: center;
+}
+
+.Pomodoro-Timer h2{
+  font-size: 80px;
+  margin: 40px 0;
+  letter-spacing: 2px;
+}
+
+.Pomodoro-Timer .controls{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.Pomodoro-Timer button{
+  padding: 14px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  background: #f97316;
+}
+
+
+
+.Quiz-App .progress-bar{
+  width: 100%;
+  height: 8px;
+  background: #1e293b;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.Quiz-App .progress{
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #7c3aed, #a855f7);
+  transition: 0.4s;
+}
+
+.Quiz-App #timer{
+  margin-top: 15px;
+  font-size: 18px;
+  color: #38bdf8;
+}
+
+.Quiz-App .option.correct{
+  background: #22c55e;
+  color: #022c22;
+}
+
+.Quiz-App .option.wrong{
+  background: #ef4444;
+  color: #450a0a;
+}
+
+.Quiz-App #restartQuiz{
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #22c55e, #4ade80);
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+}
+.RPS-App{
+  display: none;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+
+
+
+.rps-box{
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 24px;
+  background: var(--card-bg);
+}
+
+.choices{
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.choices button{
+  flex: 1;
+  padding: 16px;
+  border-radius: 16px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  background: var(--accent);
+  color: #020617;
+  transition: 0.25s;
+}
+
+.choices button:hover{
+  transform: scale(1.05);
+}
+
+.result p{
+  margin: 8px 0;
+}
+
+#game-result{
+  margin-top: 20px;
+  font-size: 24px;
+}
+

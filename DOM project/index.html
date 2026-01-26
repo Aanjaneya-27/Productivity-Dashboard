@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link rel="stylesheet" href="style.css">
+    <title>DOM Project</title>
+</head>
+<body> 
+
+  <nav class="navbar">
+  <h2>Productivity Dashboard</h2>
+
+  <div class="theme-toggle">
+    <i class="ri-sun-line" id="theme-icon"></i>
+  </div>
+</nav>
+
+  
+
+
+    
+
+    <section class="allelems">
+        <div class="todo elem" id="0">
+            <img src="./Images/TODO-LIST.jpg" alt="">
+           <h3>Todo-App</h3>
+        </div>
+         <div class="daily elem" id="1">
+            <img src="./Images/daily-planner.jpg" alt="">
+              <h3>Daily Planner</h3>
+        </div>
+         <div class="timer elem" id="2">
+            <img src="./Images/Promodo-timer.jpg" alt="">
+           <h3>Pomodoro Timer</h3>
+        </div>
+        
+        <div class="Quiz elem" id="3">
+            <img src="https://media.istockphoto.com/id/1398690866/photo/the-inscription-quiz-on-wooden-blocks-other-blocks-with-question-marks-the-concept-of.webp?a=1&b=1&s=612x612&w=0&k=20&c=pujYXirwDyUuGinui81iMrYfb5oIU6xZckQYFJUjaQc=" alt="">
+              <h3>Quiz-App</h3>
+        </div>
+         <div class="Rock Paper Scissors elem" id="4">
+           <img src="https://i.pinimg.com/736x/28/e2/a3/28e2a357753505ae9a7eb40097e93dbf.jpg" alt="">
+          <h3>Rock Paper Scissors</h3>
+        </div>
+    </section>
+
+    <section class="fullelem Todo-page">
+      <button class="btn" id="0"><i class="ri-close-line"></i></button>
+       <h1><u>TODO-PAGE</u></h1>
+       <div class="todo-container">
+         <div class="addTask">
+            <form>
+              <h3>Add Your Task</h3>
+              <input type="text" placeholder="Enter Your Task">
+              <textarea name="" placeholder="Enter Description"></textarea>
+                  
+              <button>Add Task</button>
+            </form>
+         </div>
+         <div class="allTask">
+          <div class="firstTask">
+             <h2>Namaste</h2>
+             <button>Delete</button>
+          </div>
+         </div>
+       </div>
+
+    </section>
+    <section class="fullelem Daily-Planner">
+      <button class="btn" id="1"><i class="ri-close-line"></i></button>
+       <h1>Daily Planner</h1>
+       <input type="text" id="planInput" placeholder="Enter today's plan">
+<button id="addPlan">Add Plan</button>
+
+<ul id="planList"></ul>
+
+    </section>
+    <section class="fullelem Pomodoro-Timer">
+      <button class="btn" id="2"><i class="ri-close-line"></i></button>
+       <h1>Pomodoro Timer</h1>
+       <h2 id="timerDisplay">25:00</h2>
+
+<div class="controls">
+  <button id="startTimer">Start</button>
+  <button id="pauseTimer">Pause</button>
+  <button id="resetTimer">Reset</button>
+</div>
+
+    </section>
+   
+ <section class="fullelem Quiz-App">
+  <button class="btn" id="3"><i class="ri-close-line"></i></button>
+  <h1>Quiz App</h1>
+
+  <div class="quiz-container">
+    <h2 id="question"></h2>
+
+    <div class="quiz-container">
+
+  <div class="progress-bar">
+    <div class="progress"></div>
+  </div>
+
+  <h2 id="question"></h2>
+
+  <div class="options">
+    <button class="option"></button>
+    <button class="option"></button>
+    <button class="option"></button>
+    <button class="option"></button>
+  </div>
+
+  <p id="timer">⏱️ 10s</p>
+
+  <button id="nextQuestion">Next</button>
+  <button id="restartQuiz" style="display:none;">Restart</button>
+
+  <h3 id="score"></h3>
+</div>
+
+</section>
+<section class="fullelem RPS-App">
+  <button class="btn" id="4">
+    <i class="ri-close-line"></i>
+  </button>
+
+  <h1>Rock Paper Scissors</h1>
+
+  <div class="rps-box">
+    <div class="choices">
+      <button data-choice="rock">✊ Rock</button>
+      <button data-choice="paper">✋ Paper</button>
+      <button data-choice="scissors">✌ Scissors</button>
+    </div>
+
+    <div class="result">
+      <p id="user-choice">Your Choice: -</p>
+      <p id="computer-choice">Computer Choice: -</p>
+      <h2 id="game-result">Make your move!</h2>
+    </div>
+  </div>
+</section>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
